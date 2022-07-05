@@ -27,7 +27,7 @@ public class SpecializationRepositoryTest {
 	private SpecializationRepository repo;
 	@Test
 	@Order(1)
-	@Disabled
+	//@Disabled
 	public void testSpecCreate() {
 		Specialization spec = new Specialization(null, "CRDLS","Cardiologist","They are expert on heart and blood");
 		spec = repo.save(spec);
@@ -35,6 +35,7 @@ public class SpecializationRepositoryTest {
 		}
 	
 	@Test
+	@Order(2)
 	public void testSpecFetchAll() {
 	List<Specialization> list =	repo.findAll();
 	assertNotNull(list);
