@@ -91,6 +91,6 @@
                     if(specCodeError && specNameError && specNoteError) return true;
                     else return false;
                 })
-
-
-            })
+                
+   
+ })

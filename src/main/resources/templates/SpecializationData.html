@@ -27,15 +27,16 @@
                             <td th:text="${ob.specName}" class="bg-light"></td>
                             <td th:text="${ob.specNote}"></td>
                             <td>
-                                <a>DELETE</a> | <a>EDIT</a>
+                                <a class="btn btn-danger"  th:href="@{/spec/delete(id=${ob.id})}">DELETE  <i class="fas fa-trash"></i></a> | <a class="btn btn-warning" th:href="@{/spec/edit(id=${ob.id})}">EDIT <i class="far fa-edit"></i></a>
                             </td>
                         </tr>
                     </table>
                 </div>
-                <div class="card-footer">
-                    <span>Message</span>
+                <div class="card-footer" th:if="${msg!=null}">
+                    <span th:text="${msg}"></span>
                 </div>
             </div>
         </div>
+       
     </body>
 </html>
